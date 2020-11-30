@@ -16,13 +16,13 @@ namespace AppSoundN.DatabaseApp
                 {
                     Database.connect.ConnectionString = Database.GetConnection();
                     Database.connect.Open();
-                    MessageBox.Show("Ket noi thanh cong");
+                    
                 }
 
             }
             catch(Exception e)
             {
-                MessageBox.Show("Ket noi ko thanh cong");
+               
             }
         }
         public static void CloseConnect()
@@ -33,13 +33,13 @@ namespace AppSoundN.DatabaseApp
                 {
                     Database.connect.ConnectionString = Database.GetConnection();
                     Database.connect.Close();
-                    MessageBox.Show("Dong ket noi thanh cong");
+                    
                 }
 
             }
             catch (Exception e)
             {
-                MessageBox.Show("Dong ket noi ko thanh cong");
+                
             }
         }
     }

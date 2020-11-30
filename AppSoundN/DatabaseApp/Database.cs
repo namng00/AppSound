@@ -19,5 +19,9 @@ namespace AppSoundN.DatabaseApp
         public static SqlCommand command = new SqlCommand("",connect);
         public static SqlDataReader reader;
 
+       
+
+
+
     }
 }

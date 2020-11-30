@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace AppSoundN
 {
     /// <summary>
-    /// Interaction logic for TextBoxLogin.xaml
+    /// Interaction logic for MainWindown2.xaml
     /// </summary>
-    public partial class TextBoxLogin : UserControl
+    public partial class MainWindown2 : Window
     {
-        public TextBoxLogin()
+        public MainWindown2()
         {
             InitializeComponent();
         }

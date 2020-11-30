@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace AppSoundN
 {
     /// <summary>
-    /// Interaction logic for PassWordBoxLogin.xaml
+    /// Interaction logic for ItemYourPlugin.xaml
     /// </summary>
-    public partial class PassWordBoxLogin : UserControl
+    public partial class ItemYourPlugin : UserControl
     {
-        public PassWordBoxLogin()
+        public ItemYourPlugin()
         {
             InitializeComponent();
         }

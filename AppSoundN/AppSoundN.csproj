@@ -63,17 +63,45 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Class\HangSx.cs" />
+    <Compile Include="Class\LichSuMua.cs" />
+    <Compile Include="Class\NguoiMua.cs" />
+    <Compile Include="Class\Profile.cs" />
+    <Compile Include="Class\SanPham.cs" />
+    <Compile Include="Class\User.cs" />
+    <Compile Include="DatabaseApp\Account.cs" />
     <Compile Include="DatabaseApp\ConnectStatus.cs" />
     <Compile Include="DatabaseApp\Database.cs" />
-    <Compile Include="PassWordBoxLogin.xaml.cs">
-      <DependentUpon>PassWordBoxLogin.xaml</DependentUpon>
+    <Compile Include="SubUserController\InfoSanPham.xaml.cs">
+      <DependentUpon>InfoSanPham.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubUserController\ItemSp.xaml.cs">
+      <DependentUpon>ItemSp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubUserController\ItemYourPlugin.xaml.cs">
+      <DependentUpon>ItemYourPlugin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainWindown2.xaml.cs">
+      <DependentUpon>MainWindown2.xaml</DependentUpon>
     </Compile>
     <Compile Include="SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TextBoxLogin.xaml.cs">
-      <DependentUpon>TextBoxLogin.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Utils\Helpers.cs" />
+    <Compile Include="Utils\ObservableObject.cs" />
+    <Compile Include="Utils\ValidationEmail.cs" />
+    <Page Include="SubUserController\InfoSanPham.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubUserController\ItemSp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubUserController\ItemYourPlugin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -93,15 +121,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PassWordBoxLogin.xaml">
+    <Page Include="Windows\MainWindown2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SignUp.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TextBoxLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -133,12 +157,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Image\StudioOne.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\backgroundlogin.png" />
     <Resource Include="Image\hinh1.PNG" />
     <Resource Include="Image\icon.ico" />
     <Resource Include="Image\lfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserController\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />

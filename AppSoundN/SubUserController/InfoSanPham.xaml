@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="AppSoundN.InfoSanPham"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:AppSoundN"
+             mc:Ignorable="d" 
+             Width="1700"  Height="700"
+             >
+    <Grid>
+        <StackPanel Orientation="Vertical" Width="1700" VerticalAlignment="Center" Height="700" Margin="0 0 0 0">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0,0" StartPoint="1,1">
+                    <GradientStop Color="#171615" Offset="0"/>
+                    <GradientStop Color="#2E2424" Offset="0.3"/>
+                    <GradientStop Color="#28241D" Offset="0.6"/>
+                    <GradientStop Color="#171615" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <StackPanel Margin="0 50 0 0">
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="Image/lfo.png" Stretch="None" VerticalAlignment="Center"></Image>
+                    <StackPanel Grid.Column="1">
+                        <TextBlock FontSize="50" Foreground="#ffff" FontWeight="Bold" Margin="0 30 0 0" Text="LFOTool"></TextBlock>
+                        <StackPanel Orientation="Horizontal" Margin="0 30 0 0">
+                            <TextBlock Text="XFER RECORDS" Foreground="Gray" FontSize="20" ></TextBlock>
+                        </StackPanel>
+                        <TextBlock Margin="0 20 0 0" Height="220" Width="600" HorizontalAlignment="Left" Foreground="White" TextWrapping="Wrap" FontSize="16" Text="LFOTool is an FX utility plug-in for both Macintosh OS X® and Windows®. It empowers music producers to create tremolo, auto-pan, trance-gate, side-chain compressor simulation, and dubstep-type wobble effects with minimal effort. LFOTool will process incoming audio as well as generate a MIDI message stream for controlling other instruments. This unique plug-in also allows users to sculpt custom LFO curves and shapes and comes equipped with dozens of presets to achieve desired results quickly. Consistent with other products in Xfer Records' software lineup, LFOTool is coded entirely in C++ in order to minimize the CPU load during operation."></TextBlock>
+                        <Button Width="200" HorizontalAlignment="Left"   Content="Buy" Margin="0 60 0 0" Height="50" materialDesign:ButtonAssist.CornerRadius="19" Background="Blue" FontFamily="Berlin Sans FB" FontSize="18"></Button>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

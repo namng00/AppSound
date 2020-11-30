@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="AppSoundN.ItemYourPlugin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:AppSoundN"
+             mc:Ignorable="d" 
+             Width="900" Height="130">
+    <Grid>
+        <StackPanel VerticalAlignment="Center"  Width="900" Background="White" Height="130" HorizontalAlignment="Center">
+            <Border  Margin="0 0 0 0" CornerRadius="3" BorderThickness="1" BorderBrush="Gray">
+                <StackPanel  Orientation="Horizontal" >
+                    <Border Width="130"
+                            Margin="0 0 0 0"
+                                CornerRadius="10"
+                                Height="130">
+                        <Border.Background>
+                            <ImageBrush ImageSource="Image/StudioOne.jpg"                
+                                   Stretch="UniformToFill" />
+                        </Border.Background>
+                    </Border>
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="550"></ColumnDefinition>
+                            <ColumnDefinition Width="220"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock 
+                               Grid.Column="0"
+                               Text="OTT by Xfer Records" 
+                               FontSize="20"
+                               FontWeight="Medium"
+                               Margin="20 20 0 0">
+                        </TextBlock>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock 
+                                Text="Purchased 20/10/2020" 
+                                FontSize="18"
+                                Foreground="Gray"
+                                Margin="20 20 0 0">
+                            </TextBlock>
+                            <Button Background="Transparent" 
+                                    BorderThickness="0"
+                                    Width="200"
+                                    Height="50"
+                                    Margin="12 20 9 9"
+                                    BorderBrush="Transparent">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon 
+                                    Margin="-50 0 0 0"
+                                    Width="35"
+                                    Height="35"
+                                    Background="Black"
+                                    Kind="DownloadOutline" />
+                                    <TextBlock 
+                                        Text="Download" 
+                                        FontSize="18"
+                                        Foreground="Gray"
+                                        Margin="0 10 0 0">
+                                    </TextBlock>
+                                </StackPanel>
+                                
+                                
+                            </Button>
+                            
+                           
+                        </StackPanel>
+                        
+                    </Grid>
+                    
+                    
+
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        
+    </Grid>
+</UserControl>
