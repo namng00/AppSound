@@ -5,10 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:AppSoundN"
+             Name="inforProduct"
              mc:Ignorable="d" 
              Width="1700"  Height="700"
              >
-    <Grid>
+    <Grid Margin="0 0 100 100">
         <StackPanel Orientation="Vertical" Width="1700" VerticalAlignment="Center" Height="700" Margin="0 0 0 0">
             <StackPanel.Background>
                 <LinearGradientBrush EndPoint="0,0" StartPoint="1,1">
@@ -18,20 +19,25 @@
                     <GradientStop Color="#171615" Offset="1"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
-            <StackPanel Margin="0 50 0 0">
+            <StackPanel Margin="60 90 0 0">
                 <Grid >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Image Grid.Column="0" Source="Image/lfo.png" Stretch="None" VerticalAlignment="Center"></Image>
-                    <StackPanel Grid.Column="1">
-                        <TextBlock FontSize="50" Foreground="#ffff" FontWeight="Bold" Margin="0 30 0 0" Text="LFOTool"></TextBlock>
-                        <StackPanel Orientation="Horizontal" Margin="0 30 0 0">
-                            <TextBlock Text="XFER RECORDS" Foreground="Gray" FontSize="20" ></TextBlock>
+                    <Image Grid.Column="0" Source="{Binding Imageinfo,ElementName=inforProduct}" Stretch="Fill"
+                           Width="800"
+                           Height="400"
+                           ></Image>
+                    <StackPanel Grid.Column="1" Margin="50 0 0 0">
+                        <TextBlock FontSize="50" Foreground="#ffff" FontWeight="Bold" Margin="0 15 0 0" Text="{Binding Tensp,ElementName=inforProduct}"></TextBlock>
+                        <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                            <TextBlock Text="{Binding Tenhang,ElementName=inforProduct}" Foreground="Gray" FontSize="20" ></TextBlock>
                         </StackPanel>
-                        <TextBlock Margin="0 20 0 0" Height="220" Width="600" HorizontalAlignment="Left" Foreground="White" TextWrapping="Wrap" FontSize="16" Text="LFOTool is an FX utility plug-in for both Macintosh OS X® and Windows®. It empowers music producers to create tremolo, auto-pan, trance-gate, side-chain compressor simulation, and dubstep-type wobble effects with minimal effort. LFOTool will process incoming audio as well as generate a MIDI message stream for controlling other instruments. This unique plug-in also allows users to sculpt custom LFO curves and shapes and comes equipped with dozens of presets to achieve desired results quickly. Consistent with other products in Xfer Records' software lineup, LFOTool is coded entirely in C++ in order to minimize the CPU load during operation."></TextBlock>
-                        <Button Width="200" HorizontalAlignment="Left"   Content="Buy" Margin="0 60 0 0" Height="50" materialDesign:ButtonAssist.CornerRadius="19" Background="Blue" FontFamily="Berlin Sans FB" FontSize="18"></Button>
+                        <TextBlock Margin="0 20 0 0" Height="220" Width="600" HorizontalAlignment="Left" Foreground="White" TextWrapping="Wrap" FontSize="16" Text="{Binding Thongtinsp,ElementName=inforProduct}"></TextBlock>
+                        <Button Width="200" HorizontalAlignment="Left"   
+                                x:Name="btnBuy"
+                                Content="Buy" Margin="0 100 0 0" Height="50" materialDesign:ButtonAssist.CornerRadius="19" Background="Blue" FontFamily="Berlin Sans FB" FontSize="18"></Button>
                     </StackPanel>
                 </Grid>
             </StackPanel>

@@ -5,14 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:AppSoundN"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
         mc:Ignorable="d"
-        Title="MainWindown2" Height="1080" Width="1920">
+        Title="MainWindown2" Height="1020" Width="1915">
     <Grid>
         <StackPanel Orientation="Vertical">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="70"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
+                    
                 </Grid.RowDefinitions>
                 <!--1-->
                 <StackPanel Grid.Row="0" Orientation="Horizontal" Height="70"  Background="#ffffff">
@@ -29,11 +32,13 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="350"></ColumnDefinition>
                                 <ColumnDefinition />
+                                
                             </Grid.ColumnDefinitions>
                             <TextBox Grid.Column="0"
                                          Height="50"
                                          Padding="10 6 0 0"
                                          FontSize="16"
+                                   
                                          FontFamily="Arial Rounded MT bold"
                                          Foreground="#242365"
                                          materialDesign:HintAssist.Hint="Search something...."
@@ -54,6 +59,68 @@
                                          Foreground="#BDBDBD" />
                         </Grid>
                     </Border>
+                    <materialDesign:PopupBox Foreground="Black"
+                                     VerticalAlignment="Top"
+                                     Margin="1200 20 0 0"
+                                     Panel.ZIndex="1"                                   
+                                     HorizontalAlignment="Right"
+                                     PlacementMode="BottomAndAlignCentres"
+                                     StaysOpen="False" Grid.Column="1"
+                                     >
+
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal"
+                                Height="40"
+                                Width="100">
+                                <materialDesign:PackIcon Kind="User"
+                                                 Foreground="Black"
+                                                 Margin="5,12,0,0" />
+                                <Button Cursor="Hand"
+                                    x:Name="btnProfile"
+                                    Click="btnProfile_Click"    
+                                    Padding="16 10 10 21"
+                                    VerticalAlignment="Center"
+                                    Width="80">
+                                    <Button.Content>
+                                        <TextBlock Text="Profile"
+                                           Foreground="Black"
+                                           FontSize="11"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           FontWeight="Bold"
+                                           Style="{StaticResource MaterialDesignButtonTextBlock}" />
+                                    </Button.Content>
+                                </Button>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal"
+                                Height="40"
+                                Width="100">
+                                <materialDesign:PackIcon Kind="Logout"
+                                                 Foreground="Black"
+                                                 Margin="5,12,0,0" />
+                                <Button Cursor="Hand"
+                                        
+                                Padding="16 10 10 21"
+                                VerticalAlignment="Center"
+                                x:Name="btnSignOut"
+                                Click="btnSignOut_Click"
+                                Width="80">
+                                    <Button.Content>
+                                        <TextBlock Text="Sign Out"
+                                           Foreground="Black"
+                                           FontSize="11"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           FontWeight="Bold"
+                                           Style="{StaticResource MaterialDesignButtonTextBlock}" />
+                                    </Button.Content>
+                                </Button>
+                            </StackPanel>
+                          
+                            
+                        </StackPanel>
+                    </materialDesign:PopupBox>
+
                 </StackPanel>
                 <!--2-->
                 <Grid Grid.Row="1">
@@ -68,7 +135,9 @@
                             Background="#e9e9e9"  
                             Width="200" Grid.RowSpan="2">
                         <Button x:Name="Browse" 
-                            
+                            Click="Browse_Click"
+                            MouseMove="Browse_MouseMove"
+                            MouseLeave="Browse_MouseLeave"    
                             FontFamily="Splice-Sans"  
                             Margin="5 10 0 0"  
                             FontSize="20" 
@@ -78,7 +147,9 @@
                             HorizontalAlignment="Left" 
                             Foreground="#767676" />
                         <Button x:Name="YourPlugin" 
-                            
+                            MouseLeave="YourPlugin_MouseLeave"
+                                MouseMove="YourPlugin_MouseMove"
+                            Click="YourPlugin_Click"
                             FontFamily="Splice-Sans" 
                             Margin="5 0 0 0" 
                             FontSize="20" 
@@ -97,6 +168,10 @@
                                Text="CATEGORIES"/>
                         <Button FontFamily="Splice-Sans" 
                             Margin="5 10 0 0" 
+                            x:Name="btnDaw"
+                            Click="btnDaw_Click"
+                             MouseMove="btnDaw_MouseMove"
+                            MouseLeave="btnDaw_MouseLeave"    
                             FontSize="20" 
                             Content="DAW" 
                             Background="Transparent"  
@@ -104,25 +179,38 @@
                             HorizontalAlignment="Left"
                             Foreground="#767676" />
                         <Button FontFamily="Splice-Sans" 
-                            Margin="5 0 0 0" 
+                            Margin="5 0 0 0"
+                            x:Name="btnInstruments"
+                                MouseMove="btnInstruments_MouseMove"
+                                MouseLeave="btnInstruments_MouseLeave"
+                                Click="btnInstruments_Click"
                             FontSize="20" 
                             Content="Instruments" 
                             Background="Transparent"  
                             BorderThickness="0" 
                             HorizontalAlignment="Left"
                             Foreground="#767676" />
-                        <Button FontFamily="Splice-Sans" 
+                        <Button FontFamily="Splice-Sans"
+                                MouseMove="btnEffects_MouseMove"
+                                MouseLeave="btnEffects_MouseLeave"
                             Margin="5 0 0 0" 
+                            x:Name="btnEffects"
+                            Click="btnEffects_Click"    
                             FontSize="20" 
                             Content="Effects" 
                             Background="Transparent"  
                             BorderThickness="0" 
                             HorizontalAlignment="Left"
                             Foreground="#767676" />
-                        <Button FontFamily="Splice-Sans" 
+                        <Button FontFamily="Splice-Sans"
+                                MouseMove="btnAllPlugin_MouseMove"
+                                MouseLeave="btnAllPlugin_MouseLeave"
+                                
                             Margin="5 0 0 0" 
                             FontSize="20" 
                             Content="All Plugin" 
+                            x:Name="btnAllPlugin"
+                            Click="btnAllPlugin_Click"
                             Background="Transparent"  
                             BorderThickness="0" 
                             HorizontalAlignment="Left"
@@ -136,16 +224,24 @@
                                Foreground="Gray"
                                Text="PURCHASE TYPE"/>
                         <Button FontFamily="Splice-Sans" 
+                                MouseMove="btnForSale_MouseMove"
+                                MouseLeave="btnForSale_MouseLeave"
                             Margin="5 10 0 0" 
                             FontSize="20" 
-                            Content="For Sale" 
+                            Content="For Sale"
+                            x:Name="btnForSale"
+                                Click="btnForSale_Click"
                             Background="Transparent"  
                             BorderThickness="0" 
                             HorizontalAlignment="Left"
                             Foreground="#767676" />
                         <Button FontFamily="Splice-Sans" 
+                                MouseMove="btnFreePlugin_MouseMove"
+                                MouseLeave="btnFreePlugin_MouseLeave"
                             Margin="5 0 0 0" 
                             FontSize="20" 
+                                x:Name="btnFreePlugin"
+                                Click="btnFreePlugin_Click"
                             Content="Free Plugin" 
                             Background="Transparent"  
                             BorderThickness="0" 
@@ -153,16 +249,12 @@
                             Foreground="#767676" />
                     </StackPanel>
                     <!--2.2-->
-                    <StackPanel Grid.Column="1" Margin="50 0 0 0" Grid.RowSpan="2">
+                    <StackPanel x:Name="HomeLayout" Grid.Column="1" Margin="50 0 0 0" Grid.RowSpan="2">
                         
                     </StackPanel>
                 </Grid>
 
-                <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
-                    <!--2.1-->
-
-                    <!--2.2-->
-                </StackPanel>
+                
             </Grid>
 
         </StackPanel>

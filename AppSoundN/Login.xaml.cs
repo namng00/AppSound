@@ -26,26 +26,27 @@ namespace AppSoundN
         {
             InitializeComponent();
         }
-        public static bool ConverByteToBool(int cb)
-        {
-            if (cb == 1) return true; else return false;
-        }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            User user = new User(tbEmail.Text.Trim(), tbPassword.Password.Trim(),false);
-            User admin = new User(tbEmail.Text.Trim(), tbPassword.Password.Trim(), true);
-            if(Account.CheckAccountDatabase(admin.Email, admin.Password,admin.Permisstion))
-            {
-                MessageBox.Show("dang nhap thanh cong tk admin");
-            }
-            else if(Account.CheckAccountDatabase(user.Email, user.Password, user.Permisstion))
-            { 
-                MessageBox.Show("dang nhap thanh cong user");
-            }
-            else
-            {
-                MessageBox.Show("dang nhap that bai");
-            }   
+            
+           User user = new User(tbEmail.Text.Trim(), tbPassword.Password.Trim(),false);
+           User admin = new User(tbEmail.Text.Trim(), tbPassword.Password.Trim(), true);
+           if(Account.CheckAccountDatabase(admin.Email, admin.Password,admin.Permisstion))
+           {
+               MessageBox.Show("dang nhap thanh cong tk admin");
+           }
+           else if(Account.CheckAccountDatabase(user.Email, user.Password, user.Permisstion))
+           {    
+                
+                MainWindown2 windows2 = new MainWindown2(user);
+                windows2.Show();
+                Window.GetWindow(this).Hide();
+            
+           }
+           else
+           {
+                MessageBox.Show("a");
+           }   
             
         }
 

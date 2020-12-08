@@ -41,7 +41,7 @@
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-                <TextBlock Margin="0 60 0 0" 
+                <TextBlock Margin="0 146 0 0" 
                            Foreground="#444" 
                            HorizontalAlignment="Center"  
                            FontSize="35"  
@@ -52,7 +52,7 @@
 
                 <Border
                     Grid.Column="1" 
-                    Margin="0 0 0 0"
+                    Margin="0 20 0 0"
                     Grid.Row="1"
                     CornerRadius="20"
                     Width="350"
@@ -158,7 +158,7 @@
                           FontSize="15"
                           FontFamily="Arial Rounded MT bold"
                           Content="I have read and agreed to the terms &amp; conditions"
-                          Margin="100 26 10 10"
+                          Margin="185 26 10 10"
                           Background="Green" />
                 <Button Grid.Column="1" Grid.Row="5" Content="Sign up" 
                         Margin="0 10 0 0" 

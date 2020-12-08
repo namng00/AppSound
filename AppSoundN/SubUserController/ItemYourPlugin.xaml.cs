@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppSoundN.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,77 @@ namespace AppSoundN
     /// </summary>
     public partial class ItemYourPlugin : UserControl
     {
+        private SanPham product;
+
+
+
+        
+
+        public string Tensp
+        {
+            get { return (string )GetValue(TenspProperty); }
+            set { SetValue(TenspProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Tensp.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty TenspProperty =
+            DependencyProperty.Register("Tensp", typeof(string ), typeof(ItemYourPlugin));
+
+
+
+
+        public string Tenhang
+        {
+            get { return (string)GetValue(TenhangProperty); }
+            set { SetValue(TenhangProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Tenhang.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty TenhangProperty =
+            DependencyProperty.Register("Tenhang", typeof(string), typeof(ItemYourPlugin));
+
+
+
+        public BitmapImage Image
+        {
+            get { return (BitmapImage)GetValue(ImageProperty); }
+            set { SetValue(ImageProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Image.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ImageProperty =
+            DependencyProperty.Register("Image", typeof(BitmapImage), typeof(ItemYourPlugin));
+
+
+
+        public string Date
+        {
+            get { return (string)GetValue(DateProperty); }
+            set { SetValue(DateProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Date.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty DateProperty =
+            DependencyProperty.Register("Date", typeof(string), typeof(ItemYourPlugin));
+
+
+
+
+        public ItemYourPlugin(SanPham product)
+        {
+            InitializeComponent();
+            this.product = product;
+            Tenhang = product.Tenhang;
+            Tensp = product.Tensp;
+            Image = product.Image;
+            Date = product.Date;
+        }
         public ItemYourPlugin()
         {
             InitializeComponent();
+           
         }
+
+        
     }
 }

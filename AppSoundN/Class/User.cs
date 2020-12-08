@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppSoundN.Class
 {
-    class User
+    public class User
     {
         public User(string _email,string _password,bool _permission)
         {

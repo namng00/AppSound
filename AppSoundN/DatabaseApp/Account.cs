@@ -42,7 +42,9 @@ namespace AppSoundN.DatabaseApp
 
             }
         }
+
         
+
         public static bool InsertTableAccout(string email, string password)
         {
             String sql=$"insert into Account values(@Email,@Password,0);";
@@ -69,6 +71,7 @@ namespace AppSoundN.DatabaseApp
             }
         }
 
+        
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppSoundN.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,17 @@ namespace AppSoundN
         public ItemSp()
         {
             InitializeComponent();
+        }
+
+        private void btnProduct_Click(object sender, RoutedEventArgs e)
+        {
+            Button bt = sender as Button;
+            SanPham product = bt.DataContext as SanPham;
+            MainWindown2 mainWindown2 = (MainWindown2)Window.GetWindow(this);
+            mainWindown2.HomeLayout.Children.Clear();
+            mainWindown2.HomeLayout.Children.Add(new InfoSanPham(product));
+
+
         }
     }
 }
